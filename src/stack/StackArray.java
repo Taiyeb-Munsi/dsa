@@ -1,3 +1,5 @@
+package stack;
+
 public class StackArray {
     private int[] mainArr;
     private int top;

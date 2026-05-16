@@ -1,6 +1,8 @@
+package sorting;
+
 import java.util.Random;
 
-public class bubbleSort {
+public class BubbleSort {
     public static int[] sort(int[] arr) {
         boolean swapped;
 

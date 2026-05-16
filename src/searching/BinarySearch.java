@@ -1,3 +1,5 @@
+package searching;
+
 public class BinarySearch {
     static int binarysearch(int[] arr, int key) {
         int left = 0;
