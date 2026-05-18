@@ -2,7 +2,7 @@ package sorting;
 
 import java.util.Random;
 
-public class SelectionSort {
+public class InsertionSort {
     public static void main(String[] args) {
         int[] mainArr = new int[5];
         Random r = new Random();
@@ -26,19 +26,15 @@ public class SelectionSort {
     }
 
     public static void sort(int[] arr) {
-        for(int i=0;i<arr.length-1;++i) {
-            int curr = i;
-            for(int j=i+1;j<arr.length;++j) {
-                if(arr[j] < arr[curr]) {
-                    curr = j;
-                }
-            }
+        for(int i=1;i<arr.length;++i) {
+            int temp = arr[i];
+            int j = i - 1;
 
-            if(curr != i) {
-                int temp = arr[i];
-                arr[i] = arr[curr];
-                arr[curr] = temp;
+            while(j >= 0 && arr[j] > temp) {
+                arr[j+1] = arr[j];
+                --j;
             }
+            arr[j+1] = temp;
         }
-    }
+    } 
 }
