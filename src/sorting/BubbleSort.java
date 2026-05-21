@@ -9,7 +9,7 @@ public class BubbleSort {
         
         System.out.printf("Original array : ");
         for(int i=0;i<mainArr.length;++i) {
-            i = r.nextInt(20);
+            mainArr[i] = r.nextInt(100);
             System.out.printf("%d ", i);
         }
 
