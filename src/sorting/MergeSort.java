@@ -16,7 +16,7 @@ public class MergeSort {
         System.out.println();
 
         System.out.printf("Sorted array   : ");
-        sort(mainArr, mainArr.length);
+        sort(mainArr);
 
         for(int i : mainArr) {
             System.out.printf("%d ", i);
@@ -25,16 +25,16 @@ public class MergeSort {
         System.out.println();
     }
 
-    public static void sort(int[] arr, int len) {
-        if(len <= 1) return;
+    public static void sort(int[] arr) {
+        if(arr.length <= 1) return;
 
-        int leftSize = len/2;
-        int rightSize = len - leftSize;
+        int leftSize = arr.length/2;
+        int rightSize = arr.length - leftSize;
 
         int[] leftArr = new int[leftSize];
         int[] rightArr = new int[rightSize];
 
-        for(int i = 0; i < len; ++i) {
+        for(int i = 0; i < arr.length; ++i) {
             if(i < leftSize) {
                 leftArr[i] = arr[i];
             }
@@ -43,8 +43,8 @@ public class MergeSort {
             }
         }
 
-        sort(leftArr, leftSize);
-        sort(rightArr, rightSize);
+        sort(leftArr);
+        sort(rightArr);
         merge(leftArr, rightArr, arr);
     } 
 
